@@ -6,14 +6,6 @@
 
 The official PHP SDK for [Creeble](https://creeble.io) - Transform your Notion content into powerful, accessible APIs.
 
-## Installation
-
-Install the package via Composer:
-
-```bash
-composer require creeble/creeble-php
-```
-
 ## Quick Start
 
 ```php
