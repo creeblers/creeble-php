@@ -1,9 +1,5 @@
 # Creeble PHP SDK
 
-[![Latest Version](https://img.shields.io/packagist/v/creeble/creeble-php.svg)](https://packagist.org/packages/creeble/creeble-php)
-[![PHP Version](https://img.shields.io/packagist/php-v/creeble/creeble-php.svg)](https://packagist.org/packages/creeble/creeble-php)
-[![License](https://img.shields.io/packagist/l/creeble/creeble-php.svg)](https://packagist.org/packages/creeble/creeble-php)
-
 The official PHP SDK for [Creeble](https://creeble.io) - Transform your Notion content into powerful, accessible APIs.
 
 ## Quick Start
