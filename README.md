@@ -4,7 +4,7 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/creeble/creeble-php.svg)](https://packagist.org/packages/creeble/creeble-php)
 [![License](https://img.shields.io/packagist/l/creeble/creeble-php.svg)](https://packagist.org/packages/creeble/creeble-php)
 
-The official PHP SDK for [Creeble](https://creeble.com) - Transform your Notion content into powerful, accessible APIs.
+The official PHP SDK for [Creeble](https://creeble.io) - Transform your Notion content into powerful, accessible APIs.
 
 ## Installation
 
@@ -336,9 +336,9 @@ The SDK throws specific exceptions for different error types:
 
 ## Support
 
-- [Documentation](https://docs.creeble.com)
-- [API Reference](https://api.creeble.com/docs)
-- [Support](mailto:support@creeble.com)
+- [Documentation](https://docs.creeble.io)
+- [API Reference](https://api.creeble.io/docs)
+- [Support](mailto:support@creeble.io)
 
 ## License
 
