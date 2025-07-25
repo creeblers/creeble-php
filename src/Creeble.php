@@ -34,7 +34,7 @@ class Creeble
     ) {
         $this->client = new Client(
             apiKey: $apiKey,
-            baseUrl: $baseUrl ?? 'https://api.creeble.io',
+            baseUrl: $baseUrl ?? 'https://creeble.io',
             options: $options
         );
 
