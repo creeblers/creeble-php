@@ -9,7 +9,8 @@
         "api",
         "cms",
         "headless",
-        "content"
+        "content",
+        "forms"
     ],
     "authors": [
         {

@@ -20,6 +20,12 @@ $posts = $creeble->get('cms-abc123');
 // Get a specific item by ID
 $post = $creeble->find('cms-abc123', 'post-id-123');
 
+// Submit to a form
+$result = $creeble->forms->submit('cms-abc123', 'contact', [
+    'name' => 'John Doe',
+    'email' => 'john@example.com'
+]);
+
 // Search and filter content
 $publishedPosts = $creeble->data->filter('cms-abc123', ['status' => 'published']);
 ```
@@ -73,6 +79,42 @@ $recent = $creeble->data->sortBy('cms-abc123', 'created_at', 'desc');
 
 // Get recent items
 $latest = $creeble->data->recent('cms-abc123', limit: 10);
+```
+
+### Form Submissions
+
+```php
+// Get form configuration
+$form = $creeble->forms->getForm('cms-abc123', 'contact');
+
+// Submit form data
+$result = $creeble->forms->submit('cms-abc123', 'contact', [
+    'name' => 'John Doe',
+    'email' => 'john@example.com',
+    'message' => 'Hello from PHP!'
+]);
+
+// Submit with client-side validation
+try {
+    $result = $creeble->forms->submitWithValidation('cms-abc123', 'contact', [
+        'name' => 'John Doe',
+        'email' => 'invalid-email'
+    ]);
+} catch (ValidationException $e) {
+    foreach ($e->getErrors() as $field => $errors) {
+        echo "{$field}: " . implode(', ', $errors) . "\n";
+    }
+}
+
+// Working with Form models
+use Creeble\Models\Form;
+
+$formData = $creeble->forms->getForm('cms-abc123', 'contact');
+$form = new Form($formData);
+
+echo "Form: " . $form->getName() . "\n";
+echo "Required fields: " . implode(', ', $form->getRequiredFields()) . "\n";
+echo $form->renderHtmlFields();
 ```
 
 ### Project Information
@@ -285,6 +327,16 @@ class ProductCatalog
 | `stats($endpoint)` | Get project statistics |
 | `fields($endpoint)` | Get available fields |
 | `exists($endpoint)` | Check if project exists |
+
+### Forms Methods
+
+| Method | Description |
+|--------|-------------|
+| `getForm($endpoint, $formSlug)` | Get form configuration and schema |
+| `submit($endpoint, $formSlug, $data)` | Submit data to form |
+| `getSchema($endpoint, $formSlug)` | Get form schema only |
+| `submitWithValidation($endpoint, $formSlug, $data)` | Submit with client-side validation |
+| `validateFormData($schema, $data)` | Validate form data locally |
 
 ## Common Parameters
 

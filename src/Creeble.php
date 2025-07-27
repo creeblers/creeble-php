@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Creeble;
 
 use Creeble\Endpoints\Data;
+use Creeble\Endpoints\Forms;
 use Creeble\Endpoints\Projects;
 use Creeble\Http\Client;
 
@@ -18,6 +19,7 @@ class Creeble
     private Client $client;
     
     public readonly Data $data;
+    public readonly Forms $forms;
     public readonly Projects $projects;
 
     /**
@@ -40,6 +42,7 @@ class Creeble
 
         // Initialize endpoint handlers
         $this->data = new Data($this->client);
+        $this->forms = new Forms($this->client);
         $this->projects = new Projects($this->client);
     }
 
