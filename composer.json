@@ -1,6 +1,7 @@
 {
     "name": "creeble/creeble-php",
-    "description": "PHP SDK for interacting with the Creeble API - Transform your Notion content into powerful APIs",
+    "version": "0.3.1",
+    "description": "PHP SDK for interacting with the Creeble API - Transform your Notion content into powerful APIs with advanced performance optimizations",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -10,14 +11,24 @@
         "cms",
         "headless",
         "content",
-        "forms"
+        "forms",
+        "sdk",
+        "database",
+        "performance"
     ],
     "authors": [
         {
             "name": "Creeble Team",
-            "email": "support@creeble.io"
+            "email": "support@creeble.io",
+            "homepage": "https://creeble.io"
         }
     ],
+    "homepage": "https://creeble.io",
+    "support": {
+        "docs": "https://docs.creeble.io",
+        "issues": "https://github.com/creeble/creeble-php/issues",
+        "source": "https://github.com/creeble/creeble-php"
+    },
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.0",
